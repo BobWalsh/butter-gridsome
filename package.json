@@ -1,0 +1,13 @@
+{
+  "name": "butter-gridsome",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0",
+    "gridsome-source-buttercms": "^1.0.0"
+  }
+}
