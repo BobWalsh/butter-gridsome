@@ -1,12 +1,11 @@
 <template>
   <Layout>
-    <!-- List posts -->
+    <h1 class="tag-title text-center space-bottom">
+      # {{ $page.tag.title }}
+    </h1>
+
     <div class="posts">
-      <PostCard
-        v-for="edge in $page.posts.edges"
-        :key="edge.node.id"
-        :post="edge.node"
-      />
+      <PostCard v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge.node"/>
     </div>
   </Layout>
 </template>
@@ -18,11 +17,9 @@ query {
       node {
         id
         title
-        url
         published  (format: "MMMM Do, YYYY")
         slug
         summary
-        body
         featured_image
         tags {
           name
@@ -35,16 +32,20 @@ query {
 </page-query>
 
 <script>
+import Author from "~/components/Author.vue";
 import PostCard from "~/components/PostCard.vue";
 
 export default {
   components: {
+    Author,
     PostCard
   },
   metaInfo: {
-    title: "Hello, ButterCMS!"
+    title: "Hello, world!"
   }
 };
 </script>
 
-<style></style>
+<style>
+</style>
+

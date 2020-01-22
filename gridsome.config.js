@@ -6,5 +6,16 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  siteDescription: 'Description of this gridsome site',
+
+  plugins: [{
+    use: "gridsome-source-buttercms",
+    options: {
+      authToken: '<Your AuthToken>'
+      collections: [''],
+      pages: '',
+      pageTypes: ''
+    }
+  }
+  ]
 }
