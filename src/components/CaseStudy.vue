@@ -20,6 +20,7 @@
         class="study__customer_logo"
         :src="study.data.customer_logo"
       />
+      <hr/>
     </div>
   </div>
 </template>
